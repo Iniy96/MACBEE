@@ -1,0 +1,16 @@
+.contact-page-details-content2 h4 {
+    font-weight: 700;
+  }
+  .contact-page-details-content2 {
+    .ahovercontactdetail2{
+      
+      color: black;
+      &:hover{
+        text-decoration: underline;
+        color: #0d6efd;
+      }
+    }
+  }
+
+
+  

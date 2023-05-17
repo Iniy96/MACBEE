@@ -1,0 +1,139 @@
+.footer-container2 {
+  padding: 0 100px;
+}
+.footericontab2 {
+  width: 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+.footerTab2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.footerIconDiv2 {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: #666666;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.2rem;
+  color: #fff;
+  font-size: 1.2rem;
+  transition: 0.3s ease;
+}
+.footerfbsocialmediaicon{
+  &:hover{
+    background-color: #1877f2 !important;
+  }
+}
+.footerlinkedinmediaicon{
+  &:hover{
+    background-color: #0077B5 !important;
+  }
+}
+.footertweetsocialmediaicon{
+  &:hover{
+    background-color: #1DA1F2 !important;
+  }
+}
+/* .footerwhastapsocialmediaicon{
+  &:hover{
+    background-color: #25D366 !important;
+  }
+} */
+// .footericontab span a{
+//   color: #666666;
+// }
+
+// terms cookies privacy first vertical line
+// .termscookiesverLine::before{
+//   content: "";
+//   width: 1px;
+//   height: 12px;
+//   background-color: rgb(112, 112, 112);
+//   position: absolute;
+//   top: 5px;
+//   right:55px;
+// }
+
+// terms cookies privacy first vertical line
+// .termscookiesverLine::after{
+//   content: "";
+//   width: 1px;
+//   height: 12px;
+//   background-color: rgb(112, 112, 112);
+//   position: absolute;
+//   top: 5px;
+//   left:53px;
+// }
+
+.texthoverunderline2{
+  transition: 0.3s ease;
+  &:hover{
+    text-decoration: underline;
+    transition: 0.3s ease;
+  }
+}
+/* .upbotomarrowdiv{
+  position: relative;
+}
+.upbotomarrow{
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  bottom: 0px;
+  right: -70px;
+}
+ */
+
+
+@media (max-width: 992px) {
+  .footer-container2 {
+    padding: 0 3rem;
+  }
+  .footericontab2 {
+    width: 100%;
+    align-items: center;
+  }
+ /*  .upbotomarrow{
+    width: 32px;
+    height: 32px;
+    right: -40px;
+  } */
+}
+@media (max-width: 768px) {
+  .footer-container2 {
+    padding: 0 2rem;
+  }
+  .footerTab2{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "no no"
+      "no no" 
+      "full full";
+  }
+  .footericontab2 {
+    grid-area: full;
+  }
+  .upbotomarrow2{
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer-container2 {
+    padding: 0 2rem;
+  }
+  .footericontab2 {
+    width: 100%;
+    align-items: center;
+  }
+  
+}

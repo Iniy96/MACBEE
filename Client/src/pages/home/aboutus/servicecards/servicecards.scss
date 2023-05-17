@@ -1,0 +1,54 @@
+.servicecard {
+  gap: 3rem;
+  .servicecard1 {
+    background: linear-gradient(135deg, #3399cc, #99cc66);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    color: #fff;
+    width: 340px;
+    padding: 2rem 1.5rem;
+    border-radius: 1rem;
+    p {
+      font-size: 0.9rem;
+    }
+    button {
+      background-color: #fff;
+      border-radius: 2rem;
+      font-size: 0.9rem;
+      padding: 0.5rem 2rem;
+      border: none;
+      &:hover {
+        background-color: #e9f8ee;
+      }
+    }
+  }
+  .servicecard2 {
+    background: linear-gradient(135deg, #6666cc, #ffccff);
+  }
+  .servicecard3 {
+    background-color: rgb(237, 237, 237);
+    color: #333f3e ;
+    width: 340px;
+    padding: 2rem 1.5rem;
+    border-radius: 1rem;
+    p {
+      font-size: 0.9rem;
+      color: #333f3e ;
+    }
+    div{
+        .date{
+            color: #838a89;
+        }
+    }
+    a{
+        text-decoration: none;
+    }
+    .servicecardhoverlink{
+      &:hover{
+        color: #c94f30 !important;
+        text-decoration: underline;
+      }
+    }
+  }
+}

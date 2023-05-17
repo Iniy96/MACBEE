@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600&display=swap');
+
+.contact-page-details-content h4 {
+  font-weight: 700;
+}
+.contact-page-details-content {
+  .ahovercontactdetail{
+    
+    color: black;
+    &:hover{
+      text-decoration: underline;
+      color: #0d6efd;
+    }
+  }
+}
+.contact-page-detail-table {
+  width: 60%;
+}
+
+@media (max-width: 768px) {
+  .contact-page-detail-table {
+    width: 80%;
+  }
+}
+@media (max-width: 576px) {
+  .contact-page-detail-table {
+    width: 100%;
+  }
+}

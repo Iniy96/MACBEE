@@ -1,0 +1,25 @@
+.productContainerCard{
+    border-radius: 2rem;
+    width: 30%;
+    .storeIcons a{
+        color: #989898;
+        &:hover{
+        color: #444444;
+        }
+    }
+}
+
+
+@media (max-width:768px){
+    .productContainerCard{
+        border-radius: 2rem;
+        width: 100%;
+        gap: 2rem;
+        FaGooglePlay{
+            &:hover{
+                color: azure;
+                cursor: pointer;
+            }
+        }
+    }
+}

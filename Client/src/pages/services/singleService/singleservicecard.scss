@@ -1,0 +1,53 @@
+
+
+
+.bluetogreengradient{background: linear-gradient(
+    to right,
+    #4a92d5,
+    #9ec880
+  );
+}
+.greentobluegradient{background: linear-gradient(
+    to right,
+    #9ec880,
+    #4a92d5
+  );
+}
+
+.singleservicecard{
+  border-radius: 2rem;
+   width: 48% ;
+   display: flex;
+   flex-direction: column;
+  div{
+    height:6rem;
+    width: 6rem;
+    border-radius: 1.5rem;
+  }
+  p{
+    margin-top: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .singleservicecard{
+    div{
+      height:5rem;
+      width: 5rem;
+      border-radius: 1.3rem;
+      text-align: justify;
+    }
+  }
+}
+@media (max-width: 576px) {
+  .singleservicecard{
+    width: 100% ;
+    div{
+      height:4rem;
+      width: 4rem;
+      border-radius: 1rem;
+      text-align: justify;
+
+    }
+  }
+}

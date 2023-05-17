@@ -1,0 +1,122 @@
+.product-carousel-container {
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    .carouselcard {
+      display: flex;
+      flex-direction: column;
+      border-radius: 1.4rem;
+      card-body {
+        h6 {
+          font-size: 1.1rem;
+          font-weight: bolder;
+        }
+      }
+      .productLogo {
+        width: 2.5rem;
+        height: 2.5rem;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+      .producttext {
+        font-size: 1rem;
+        text-align: left;
+      }
+    }
+  }
+  .swiper-slide .carouselcard {
+    width: 100%;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .pc-learnmore:hover {
+    color: #0a7bbf !important;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  .pc-bs-apple,
+  .pc-googleplay {
+    color: #b2b2b2;
+    cursor: pointer;
+  }
+  .pc-bs-apple:hover,
+  .pc-googleplay:hover {
+    color: rgb(33, 37, 41);
+  }
+}
+
+// code for buttons to dislayo outside the contaainer
+
+// media screens
+
+@media screen and (min-width: 1200px) {
+  /* CSS styles for screens with a maximum width of 1200px */
+  .product-carousel-container {
+    .swiper-slide {
+      .carouselcard {
+        height: 410px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1200px) {
+  /* CSS styles for screens with a maximum width of 1200px */
+  .product-carousel-container {
+    .swiper-slide {
+      .carouselcard {
+        height: 370px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  /* CSS styles for screens with a maximum width of 600px */
+  .product-carousel-container {
+    .swiper-slide {
+      .carouselcard {
+        height: 380px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  /* CSS styles for screens with a maximum width of 600px */
+  .product-carousel-container {
+    .swiper-slide {
+      .carouselcard {
+        height: 400px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 576px) {
+  /* CSS styles for screens with a maximum width of 600px */
+  .product-carousel-container {
+    .swiper-slide {
+      .carouselcard {
+        height: 430px;
+      }
+    }
+  }
+}

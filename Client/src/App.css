@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap");
+
+* {
+  font-family: "Oxygen", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  overflow-x: hidden; /* hide horizontal overflow */
+
+  width: 100vw; /* set width to 100% */
+}
+
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+
+.fw-700 {
+  font-weight: 700;
+}
+.w-20 {
+  width: 20%;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
