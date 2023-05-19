@@ -28,7 +28,7 @@ export default function ProductsContainer({PRODUCTS,handleLearnMoreBtn}) {
                                         <h5 className="card-title fs-5 fw-700">{PRODUCT.productName}</h5>
                                         <p className="position-absolute bg-primary px-3 text-white" style={{ top: "1.4rem", right: "0",fontSize:"0.8rem" }}>{PRODUCT.availability}</p>
                                         <p className="card-text pt-3">{PRODUCT.productTagline}</p>
-                                        <button className="btn p-0 mt-auto text-primary" onClick={()=>handleLearnMoreBtn(PRODUCT.productName)} style={{width:"fit-content"}}>Learn More</button>
+                                        <Link to={`/products/${PRODUCT.params}`} className="btn p-0 mt-auto text-primary" style={{width:"fit-content"}}>Learn More</Link>
                                         <div className="pt-4 d-flex align-items-center">
                                             <p className="m-0">For Downloads,Check it with</p>
                                             <div className=" ms-auto d-flex gap-2 storeIcons">

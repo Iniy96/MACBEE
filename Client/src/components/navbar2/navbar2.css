@@ -7,6 +7,9 @@
   padding: 0.45rem 1rem;
   width: 100%;
 }
+.navigation2 .navMenuIcon:hover{
+  cursor: pointer;
+}
 .sidebar2 {
  position: absolute;
   width: 250px;

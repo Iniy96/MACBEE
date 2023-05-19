@@ -1,0 +1,34 @@
+.productCarousel2 {
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+  }
+  .carousel-control-prev {
+    top: 50%;
+    transform: translate(-2.5rem, -50%);
+  }
+  .carousel-control-next {
+    top: 50%;
+    transform: translate(2.5rem, -50%);
+  }
+  .pc-bs-apple,
+  .pc-googleplay {
+    color: #b2b2b2;
+    cursor: pointer;
+    transition: 0.4s ease;
+    &:hover {
+      color: rgb(33, 37, 41);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .productCarousel2 {
+    .carousel-control-prev,
+    .carousel-control-next {
+      display: none;
+    }
+  }
+}

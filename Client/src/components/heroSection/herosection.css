@@ -14,37 +14,43 @@
 .herosecimgBg{
   background: linear-gradient(
     to right,
-    rgba(0, 0, 0, 0.85),
-    rgba(0, 0, 0, 0.85)
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0.75)
   ),
   url("../../assets/banner_Image.jpg");
   background-size: cover;
   background-position: center;
 }
-.hero-section h3 {
-  font-size: 2.8em;
+.hero-section .heroTitle {
+  font-size: 3em;
   letter-spacing: 0.05em;
-  max-width: 400px;
   line-height: 1.5em;
 }
-.hero-section p {
+.hero-section .herocontent {
   letter-spacing: 0.05em;
+  font-size: large;
+  max-width: 450px ;
 }
 .hero-section-content {
   position: absolute;
   top: 55%;
-  left: 30%;
-  transform: translate(-50%, -50%);
-  padding-left: 8.5em;
+  padding-left: 9rem;
+  transform: translateY( -50%);
+
+
 }
 .GoogleMapIconContainer {
   padding-left: 10em;
 }
 .heroSectionbtn {
-  background-color: #0dcaf0;
-  padding: 0.6rem 2rem;
+  background-color: #ffffff;
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: 2rem;
-  color: #fff;
+  color: #303030;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .heroSectionbtn:hover {
   cursor: pointer;

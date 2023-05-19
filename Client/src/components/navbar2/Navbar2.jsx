@@ -21,17 +21,17 @@ export const Navbar2 = () => {
           <Link to="/" className='text-black ' style={{fontSize:"1.5rem"}}>MCABEE</Link>
         </motion.div>
         <div >
-          <motion.label initial={{ opacity: 0, x: "50vw" }}
+          <motion.div initial={{ opacity: 0, x: "50vw" }}
             animate={{ opacity: 1, x: 1 }}
-            transition={{ delay: 1.8, duration: 1 }} onClick={handleSideBarVisible} >
+            transition={{ delay: 1.8, duration: 1 }} className='navMenuIcon' onClick={handleSideBarVisible} >
             <RiMenu3Fill color={"#8dcff4"} size={25} />
-          </motion.label>
+          </motion.div>
         </div>
         <div className={`sidebar2 ${sideBarVisible?"sidebar2visible":"sidebar2Hidden"} `}>
           <div className='sidebarcontentwrapper2 border'>
-            <Link to="/"><header>MCABEE</header></Link>
+           <header>MCABEE</header>
             <ul>
-              <li><Link className="nav-link navigation-link" to="/whatwedo">What We Do</Link></li>
+              <li><Link className="nav-link navigation-link" to="/">What We Do</Link></li>
               <li><Link className="nav-link navigation-link" to="/whoweare">Who We Are</Link></li>
               <li><Link className="nav-link navigation-link" to="/products">Products</Link></li>
               <li><Link className="nav-link navigation-link" to="/services">Services</Link></li>

@@ -31,10 +31,8 @@ export const Footer2 = () => {
             <motion.footer ref={footerref1}
         animate={footeranimation1}>
                 <div className="footerTab2 position-relative">
-                    <FooterTabs2 data={["Company", "About", "Careers", "Products", "Services"]} />
-                    <FooterTabs2 data={["Products", "Firstlook", "Notepad", "Search Engine", "View all"]} />
-                    <FooterTabs2 data={["Services", "Product Design", "Mobile Application", "Web Application", "Cloud"]} />
-                    <FooterTabs2 data={["Support", "Business Consulting", "HR Support", "Product Related", "General Queries"]} />
+                    <FooterTabs2/>
+        
 
                     <div className='footericontab2 pt-3'>
                         <h5 className='fw-bold fs-6 text-end  text-muted'>Follow us on</h5>

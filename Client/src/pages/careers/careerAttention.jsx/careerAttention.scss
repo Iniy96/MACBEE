@@ -14,3 +14,18 @@
     opacity: 0;
     cursor:pointer;
   }
+
+  .custom-file-input::-webkit-file-upload-button {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .custom-file-input::-moz-file-upload-button {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .custom-file-input::-ms-file-upload-button {
+    background-color: #007bff;
+    color: #fff;
+  }

@@ -2,10 +2,19 @@ import React from 'react'
 import "./herosection.css"
 import { GoogleMapIcon } from '../../assets/GoogleMapIcon';
 import { motion } from "framer-motion"
+import {BsArrowRight} from "react-icons/bs"
+import { useNavigate } from 'react-router-dom';
 
 export const HeroSection = ({ data }) => {
   
   const { image, topic, content, button,background } = data
+  
+  const navigate = useNavigate()
+
+  const handleLetsTalk=()=>{
+    navigate("/services/serviceconsultation")
+  }
+
   return (
     <div className={`hero-section ${background}`}>
       <div className='hero-section-content text-white'>
@@ -19,19 +28,21 @@ export const HeroSection = ({ data }) => {
           )
         }
 
-        <motion.h3
+        <motion.p
           initial={{ opacity: 0, y: "-100vh" }}
           animate={{ opacity: 1, y: 1 }}
-          transition={{delay:0.5,duration:1        }}>
+          transition={{delay:0.5,duration:1        }} className='heroTitle'>
             {topic}
-            </motion.h3>
+            </motion.p>
         <motion.p initial={{ opacity: 0, x: "-50vw" }}
           animate={{ opacity: 1, x: 1 }}
-          transition={{delay:3 ,duration:1 }} className='pb-4'>{content}</motion.p>
+          transition={{delay:3 ,duration:1 }} className='pb-5 herocontent'>{content}</motion.p>
         {
-          button && <motion.a initial={{ opacity: 0, x: "50vw" }}
+          button && <motion.div initial={{ opacity: 0, x: "50vw" }}
           animate={{ opacity: 1, x: 1 }}
-          transition={{delay:4.5,duration:1}} className='heroSectionbtn' href='#'>{button}</motion.a>
+          transition={{delay:4.5,duration:1}} className='d-flex  align-items-center' >
+           Let's Talk <a href="#" className='text-dark heroSectionbtn ms-4' onClick={handleLetsTalk} ><BsArrowRight size={20}/></a>
+            </motion.div>
         }
 
       </div>
