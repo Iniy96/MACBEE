@@ -36,7 +36,7 @@ export const Footer2 = () => {
 
                     <div className='footericontab2 pt-3'>
                         <h5 className='fw-bold fs-6 text-end  text-muted'>Follow us on</h5>
-                        <div className='d-flex gap-2'>
+                        <div className='d-flex mb-2 gap-3'>
                             <a className='footerIconDiv2 footerfbsocialmediaicon' href='https://www.facebook.com/'><FaFacebookF className='' /></a>
                             <a className='footerIconDiv2 footerlinkedinmediaicon' href='https://www.linkedin.com/'><FaLinkedinIn className='' /></a>
                             <a className='footerIconDiv2 footertweetsocialmediaicon' href='https://twitter.com/home'> <FaTwitter className='' /></a>

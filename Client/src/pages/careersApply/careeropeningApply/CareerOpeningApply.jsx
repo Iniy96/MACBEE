@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react'
 import { SendResume } from '../../../Services/api';
+import { RiShareForward2Fill } from "react-icons/ri"
 
 
 const CareerOpeningApply = ({ JOBOPENINGS }) => {
@@ -10,8 +11,14 @@ const CareerOpeningApply = ({ JOBOPENINGS }) => {
     const [successmsg, setsuccessmsg] = useState(true)
     const [showProgress, setshowProgress] = useState(false)
     const [submiterror, setsubmiterror] = useState(false)
-
+    const [selectedFile, setselectedFile] = useState(null)
     const formRef = useRef(null);
+
+    const handleFileinputChange = (e) => {
+        e.preventDefault()
+        setsubmiterror(false)
+        setselectedFile(e.target.files[0])
+    }
 
     const handleSubmit = async (e) => {
         e.preventDefault()
@@ -19,6 +26,7 @@ const CareerOpeningApply = ({ JOBOPENINGS }) => {
 
         const data = Object.fromEntries(formData);
         data.jobtitle = JOBOPENINGS.jobTitle
+        setselectedFile(null)
         if (data.resume.name === "") {
             setsubmiterror(true)
         } else {
@@ -97,7 +105,16 @@ const CareerOpeningApply = ({ JOBOPENINGS }) => {
                             {/* email input */}
                             <input type="text" name='email' className="form-control" placeholder="Email-id" />
                             {/* file input */}
-                            <input type="file" onChange={() => setsubmiterror(false)} accept=".pdf" capture="filesystem" className="form-control btn btn-primary" id="myFile" name="resume" />
+                            <div >
+                                <div className="btn btn-primary btn-file">
+                                    <RiShareForward2Fill size={30} />
+                                    <span> Upload CV</span>
+                                    <input type="file" onChange={handleFileinputChange} name="resume" accept=".pdf" capture="filesystem" />
+                                </div>
+                                {
+                                    selectedFile ? <span className='ps-4'>{selectedFile.name}</span>:""
+                                }
+                            </div>
                         </div>
                         {
                             submiterror ? <span className='text-danger'>Please attach your Resume*</span> : ""

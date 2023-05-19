@@ -53,7 +53,7 @@ export const CareersApplyPage = () => {
             <div className='container'>
                 <HeroSection2 data={heroSection2} filter={filterOpening} setfilter={setfilterOpening} diplayListOption={renderCareerPage} displaySelectMenu={displaySelectMenu} displaySearchFilter={displaySearchFilter} />
                 <div className=' pt-2 pb-2 border-top border-bottom '>
-                    <Link to="/careers" className='text-dark' style={{ cursor: 'pointer' }}><BsArrowLeft size={25} /><span className='ps-3'>Back to Products</span>
+                    <Link to="/careers" className='text-dark' style={{ cursor: 'pointer' }}><BsArrowLeft size={25} /><span className='ps-3'>Back to Careers</span>
                     </Link>
 
                 </div>

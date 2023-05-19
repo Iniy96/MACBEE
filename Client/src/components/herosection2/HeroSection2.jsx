@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import "./herosection2.scss"
 
 //react icon import 
 import { BiSearchAlt2 } from "react-icons/bi"
@@ -17,7 +18,7 @@ const HeroSection2 = ({ data, setfilter, filter, diplayListOption, displaySelect
           {
             displaySelectMenu
               ? (
-                <select className="form-select h-100 border-0 " value={filter} onChange={(e) => setfilter(e.target.value)} aria-label="Default select example" style={{ width: "fit-content" }}>
+                <select className="form-select herosec2Select h-100 border-0 " value={filter} onChange={(e) => setfilter(e.target.value)} aria-label="Default select example" >
                   <option value="All" disabled={diplayListOption ? false : true}>{data.title === "PRODUCTS" ? "PRODUCTS" : data.title === "CAREER" ? "All Openings" : "Region"}</option>
                   {
                     data.List.map((item) => {
@@ -32,7 +33,7 @@ const HeroSection2 = ({ data, setfilter, filter, diplayListOption, displaySelect
             displaySearchFilter
               ? (
                 <div className="input-group mb-3 border-0">
-                  <span className="input-group-text border-0" id="basic-addon1"><BiSearchAlt2 /> </span>
+                  <span className="input-group-text border-0 " id="basic-addon1"><BiSearchAlt2 /> </span>
                   <input type="text" className="form-control border-0" placeholder="Search" aria-label="Username" aria-describedby="basic-addon1" />
                 </div>
               ) : ""

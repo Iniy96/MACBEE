@@ -13,3 +13,13 @@
     color: gray !important;
   }
 }
+.homesubmenu{
+  margin-left: auto;
+}
+
+@media (max-width: 768px) {
+  .homesubmenu{
+    margin-right: auto;
+    margin-left: 0;
+  }
+}

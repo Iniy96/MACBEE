@@ -3,8 +3,10 @@ import { Navbar2 } from '../../components/navbar2/Navbar2';
 import HeroSection2 from '../../components/herosection2/HeroSection2';
 import { Footer2 } from '../../components/footer2/Footer2';
 import { SendEnquiry } from '../../Services/api';
+import {RiShareForward2Fill} from "react-icons/ri"
 
 const Services2 = () => {
+    const formRef = useRef(null);
 
     const [displaySearchFilter, setdisplaySearchFilter] = useState(true)
 
@@ -12,12 +14,17 @@ const Services2 = () => {
     const [showsuccessmsg, setshowsuccessmsg] = useState(false)
     const [successmsg, setsuccessmsg] = useState(true)
     const [showProgress, setshowProgress] = useState(false)
+    const [selectedFile, setselectedFile] = useState(null)
 
     const serviceList = ["Mobile App Development", "Web Application Development", "Automation", "Cloud Hosting", "Digital Marketing", "Big Data Analytics"] //sets the list option for herosection2 which is going as object prop 
 
     //const SelectedProduct = PRODUCTS.filter((PRODUCT) => filterProduct === PRODUCT.productName) //filters the job which the user select through a select list in herosection2
 
-    const formRef = useRef(null);
+    const handleFileinputChange = (e) => {
+        e.preventDefault()
+        setselectedFile(e.target.files[0])
+    }
+
 
     const handleSubmit = async (e) => {
         e.preventDefault()
@@ -25,13 +32,14 @@ const Services2 = () => {
 
         const data = Object.fromEntries(formData);
         formRef.current.reset();   // Reset the form values
+        setselectedFile(null)
         setshowProgress(true)
         const res = await SendEnquiry(data)
         if (res.status === "ok") {
-           setshowProgress(false)
-           setsuccessmsg(true)
-           setshowsuccessmsg(true)
-        }else{
+            setshowProgress(false)
+            setsuccessmsg(true)
+            setshowsuccessmsg(true)
+        } else {
             setshowProgress(false)
             setsuccessmsg(false)
             setshowsuccessmsg(true)
@@ -91,12 +99,20 @@ const Services2 = () => {
                                 <input type="text" name='mobile' className="form-control" placeholder="Contact Number" aria-label="Username" aria-describedby="basic-addon1" />
                             </div>
                             {/* textt field */}
-                            <div className="mb-3"> className
+                            <div className="mb-3">
                                 <textarea className="form-control" name='clientRequirement' rows="3" placeholder='A brief about your requirement'></textarea>
                             </div>
                             {/* file input */}
-
-                            <input type="file" className="form-control btn btn-primary" id="myFile" name="document" />
+                            <div >
+                                <div className="btn btn-primary btn-file">
+                                    <RiShareForward2Fill size={30} />
+                                    <span> Upload CV</span>
+                                    <input type="file" onChange={handleFileinputChange} name="document" />
+                                </div>
+                                {
+                                    selectedFile ? <span className='ps-4'>{selectedFile.name}</span> : ""
+                                }
+                            </div>
                         </div>
                         <div className='d-flex gap-5 mt-5 align-items-center'>
                             <button type='submit' className='btn btn-outline-secondary '>Submit</button>

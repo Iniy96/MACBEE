@@ -21,6 +21,10 @@ const upload = configureMulter();
 
 // app.use("/",routes)
 
+app.get("/",(req,res)=>{
+    res.json("Server started...")
+})
+
  app.post("/SendResume", upload.single("resume"), async (req, res) => {
     try {
         const { name, mobile, address, email, jobtitle } = req.body;

@@ -32,14 +32,14 @@ export const Home = () => {
 
 
   const [homeref1, home1inView] = useInView({
-    threshold: 0.2,triggerOnce: true
+    threshold: 0.2, triggerOnce: true
   });
 
   const [homeref2, home2inView] = useInView({
-    threshold: 0.2,triggerOnce: true
+    threshold: 0.2, triggerOnce: true
   });
   const [homeref3, home3inView] = useInView({
-    threshold: 0.2,triggerOnce: true
+    threshold: 0.2, triggerOnce: true
   });
 
 
@@ -50,7 +50,7 @@ export const Home = () => {
         y: 0,
         transition: { delay: 0.25, duration: 0.5 },
       });
-    }else{
+    } else {
       homeanimation1.start({ opacity: 0, y: -50 });
     }
   }, [home1inView]);
@@ -87,7 +87,9 @@ export const Home = () => {
   return (
     <>
       <div>
+
         <Navbar />
+
         <HeroSection data={herosectionData} />
         <div >
           <motion.p ref={homeref1}

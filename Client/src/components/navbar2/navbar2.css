@@ -14,9 +14,13 @@
  position: absolute;
   width: 250px;
   /* height: 100%; */
-  top: 4.4rem;
+  top: 4.2rem;
   transition: all .5s ease;
   z-index: 999;
+  background-color: rgba(39, 30, 57, 0.8);
+  border-radius: 2rem;
+  padding: 0;
+  margin: 0;
 }
 .sidebar2Hidden{
   right: -20rem;
@@ -24,17 +28,38 @@
   transition: all .5s ease;
 }
 .sidebar2visible{
-  right: 7.8rem;
+  right: 1rem;
   transition: all .5s ease;
 }
-.sidebarcontentwrapper2{
-  background-color: #fff;
-  border-radius: 2rem;
-} 
+.sidebar2 ul{
+  margin: 0;
+  padding: 2rem 3rem 2rem ;
+}
+.sidebar2 ul li{
+  text-align: right;
+  padding: 1rem 0;
+ }
+.sidebar2 ul a{
+  display: block;
+  height: 100%;
+  width: 100%;
+  font-size: 16px;
+  color: #ffffff;
+  box-sizing: border-box;
+  transition: .4s;
+}
+ul li:hover a{
+ padding-right: 3rem;
+ color: azure;
+  
+}
+
+
+
 .iconliks2{
   transition: .2s ease;
 }
-.iconliks2:hover{
+/* .iconliks2:hover{
   transform: scale(1.5);
   transition: .2s ease;
 }
@@ -45,25 +70,8 @@
   user-select: none;
   padding-left: 1.9rem;
 }
-.sidebar2 ul a{
-  display: block;
-  height: 100%;
-  width: 100%;
-  line-height: 50px;
-  font-size: 16px;
-  color: #3d5672;
-  box-sizing: border-box;
-  border-bottom: 1px solid rgb(160, 159, 159);
-  transition: .4s;
-}
-.sidebar2 ul  li:last-of-type a{
-  border-bottom: none;
-}
-.sidebar2 ul li:hover a{
-  padding-left: 10px;
-  font-size: 1.1rem;
-}
 
+ */
 @media (max-width:568px){
   .sidebar2visible{
     right: 4rem;
